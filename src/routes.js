@@ -2,14 +2,15 @@ import React from 'react';
 import { Route, IndexRoute } from 'react-router';
 
 import App from './components/app';
-import ProductsIndex from './components/products_index';
+import DrinksIndex from './components/drinks_index';
+import FoodIndex from './components/food_index';
 import SinglePost from './components/single_post';
 
 export default (
   <Route path="/" component={App}>
-    <IndexRoute component={ProductsIndex} />
-    <Route path="Matur" component={ProductsIndex} />
-    <Route path="Drykkir" component={ProductsIndex} />
+    <IndexRoute component={FoodIndex} />
+    <Route path="Drykkir" component={DrinksIndex} />
+    <Route path="Matur" component={FoodIndex} />
     <Route path=":menu_cat/:id" component={SinglePost} />
   </Route>
 );
