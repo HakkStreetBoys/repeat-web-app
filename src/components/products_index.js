@@ -15,7 +15,7 @@ class PostsIndex extends Component {
 
       return (
         <li className="list-group-item" key={post.id}>
-          <Link to={drink_cat_replace + "/" + post.id}>
+          <Link to={"products/" + post.id}>
             <span className="pull-xs-right">{post.slug}</span>
             <strong>{post.slug}</strong>
           </Link>
