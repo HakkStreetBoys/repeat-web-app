@@ -1,0 +1,23 @@
+@import 'incl/normalize';
+@import 'incl/variables';
+@import 'incl/mixins';
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: $font_bold;
+  -webkit-font-smoothing: antialiased;
+  background-color: $bg_color;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+// @import 'incl/partials/product_list';
+@import 'incl/partials/partials';

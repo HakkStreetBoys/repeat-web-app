@@ -14,7 +14,7 @@ export function fetchDrinks() {
 
   return {
     type: FETCH_DRINKS,
-    payload: request
+    payload: request,
   };
 }
 

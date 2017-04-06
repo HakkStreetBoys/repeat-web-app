@@ -9,6 +9,7 @@ class SinglePost extends Component {
   };
 
   componentWillMount() {
+    this.oldPost = "";
     this.props.fetchPost(this.props.params.id);
   }
 
@@ -20,13 +21,21 @@ class SinglePost extends Component {
   render() {
     const { post } = this.props;
 
-    if (!post) {
+    if (!post || (post == this.oldPost)) {
       return <div>Loading...</div>;
     }
 
+    this.oldPost = post;
+
+    const { menu_title, menu_price } = post.acf;
+    const { medium_large } = post.acf.menu_image.sizes;
+
     return (
       <div>
-        <Link to="/">Back To Index</Link>
+        <div className="single_hero">
+          <img src={medium_large} alt="" />
+        </div>
+        <Link to="/"><img src="../style/img/arrow-back.svg" alt="Back" /></Link>
         <h3>{post.acf.menu_title}</h3>
         <p>{post.acf.menu_description}</p>
       </div>
