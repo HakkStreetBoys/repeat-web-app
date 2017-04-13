@@ -19,5 +19,10 @@ h2 {
   font-size: 24px;
 }
 
+p {
+  font-family: $font_regular;
+  font-size: 18px;
+}
+
 // @import 'incl/partials/product_list';
 @import 'incl/partials/partials';

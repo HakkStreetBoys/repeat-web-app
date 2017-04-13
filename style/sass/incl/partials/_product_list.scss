@@ -43,28 +43,28 @@
         padding-top: 28px;
       }
     }
+  }
+}
 
-    .product_btn {
-      background: $main_red;
-      padding: 10px 20px;
-      margin-top: -15px;
-      @include border;
+.product_btn {
+  background: $main_red;
+  padding: 10px 20px;
+  margin-top: -15px;
+  @include border;
 
-      ul {
-        display: flex;
-        justify-content: space-between;
-        align-items: baseline;
-        margin-bottom: 0;
-      }
+  ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0;
+  }
 
-      li {
-        color: #fff;
-        font-size: 18px;
-        padding-top: 10px;
-        &:nth-child(2) {
-          font-size: 24px;
-        }
-      }
+  li {
+    color: #fff;
+    font-size: 18px;
+    padding-top: 10px;
+    &:nth-child(2) {
+      font-size: 24px;
     }
   }
 }

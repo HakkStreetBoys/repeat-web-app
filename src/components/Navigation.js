@@ -15,12 +15,14 @@ const Navigation = () => {
       <nav>
         <ul>
           <Link to={"matur"}>
+            <img src="../style/img/matur-icon.svg" alt="" />
             <li>Matur</li>
           </Link>
           <li className="order_btn">
             <img src="../style/img/order_logo.svg" />
           </li>
           <Link to={"drykkir"}>
+            <img src="../style/img/drykkir-icon.svg" alt="" />
             <li>Drykkir</li>
           </Link>
         </ul>

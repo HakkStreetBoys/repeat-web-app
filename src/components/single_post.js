@@ -27,17 +27,38 @@ class SinglePost extends Component {
 
     this.oldPost = post;
 
-    const { menu_title, menu_price } = post.acf;
+    const { menu_title, menu_price, menu_tags } = post.acf;
     const { medium_large } = post.acf.menu_image.sizes;
+
+    let tags;
+    if (menu_tags != null) {
+      tags = menu_tags.map(menu_tag =>
+        <div key={menu_tag.name}><li>{menu_tag.name}</li></div>
+      );
+    }
 
     return (
       <div>
+        <Link to="/"><img src="../style/img/arrow-back.svg" alt="Back" className="back_arrow" /></Link>
         <div className="single_hero">
           <img src={medium_large} alt="" />
         </div>
-        <Link to="/"><img src="../style/img/arrow-back.svg" alt="Back" /></Link>
-        <h3>{post.acf.menu_title}</h3>
-        <p>{post.acf.menu_description}</p>
+        <div className="container">
+          <div className="single_info">
+            <h2>{post.acf.menu_title}</h2>
+            <p>{post.acf.menu_description}</p>
+          </div>
+          <div className="product_btn">
+            <ul>
+              <li>Bæta við pöntun</li>
+              <li>{menu_price} kr.</li>
+            </ul>
+          </div>
+          <div className="single_tags">
+            {tags}
+          </div>
+        </div>
+
       </div>
     );
   }

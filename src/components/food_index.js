@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { fetchFood } from '../actions/index';
 // import { Link } from 'react-router';
 import Product from './Product';
+import Header from './Header';
 
 class FoodIndex extends Component {
   componentWillMount() {
@@ -25,9 +26,9 @@ class FoodIndex extends Component {
 
   render() {
     return (
-      <div className="container">
-        <h3>Posts</h3>
-        <div className="product_container">
+      <div>
+        <Header headerText="Matur" />
+        <div className="container product_container">
           {this.renderFood()}
         </div>
       </div>

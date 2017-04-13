@@ -2,7 +2,7 @@
   position: fixed;
   background: #fff;
   width: 100%;
-  padding: 50px 50px 5px 50px;
+  padding: 12px 50px 5px 50px;
   bottom: 0;
   z-index: 999;
 
@@ -10,6 +10,10 @@
     margin: 0;
     display: flex;
     justify-content: space-between;
+
+    a {
+      text-align: center;
+    }
 
     li {
       color: $text_color;
