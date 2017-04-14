@@ -5,7 +5,7 @@ import { Link } from 'react-router';
 import firebase from 'firebase';
 
 class AnonLogin extends Component {
-  
+
   // const btnLogin = document.getElementById('btnLogin');
 
   // btnLogin.addEventListener('click', e => {
@@ -13,7 +13,7 @@ class AnonLogin extends Component {
   // });
 
   renderDrasl() {
-    
+
     const fbaseAuth = firebase.auth().signInAnonymously();
 
     return (
@@ -35,3 +35,9 @@ class AnonLogin extends Component {
 
 
 export default AnonLogin;
+
+
+
+// Sign in
+// Þegar signed in birta dót til að panta
+// Eftir pöntun birta pantanir users
