@@ -32,10 +32,12 @@ class SignInForm extends Component {
         let response = axios.post(`${ROOT_AUTH_URL}/verifyOneTimePassword`, {
             phone: this.state.phone,
             code: this.state.code
+        }).then((response) => {
+          firebase.auth().signInWithCustomToken(response.data.token);
         });
-        console.log(response.data);
+        console.log(response);
         // console.log(response.data);
-        // firebase.auth().signInWithCustomToken(response.data.token);
+
     }
 
     render() {

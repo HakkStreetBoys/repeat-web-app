@@ -5,6 +5,7 @@ import App from './components/app';
 import DrinksIndex from './components/drinks_index';
 import FoodIndex from './components/food_index';
 import SinglePost from './components/single_post';
+import MyOrder from './components/MyOrder';
 // import SignUpForm from './components/SignUpForm';
 // import SignInForm from './components/SignInForm';
 import Auth from './components/Auth';
@@ -14,6 +15,7 @@ export default (
     <IndexRoute component={Auth} />
     {/* <Route path="Signin" component={SignInForm} /> */}
     <Route path="Drykkir" component={DrinksIndex} />
+    <Route path="Myorder" component={MyOrder} />
     <Route path="Matur" component={FoodIndex} />
     <Route path=":menu_cat/:id" component={SinglePost} />
   </Route>
