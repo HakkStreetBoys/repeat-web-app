@@ -29,11 +29,13 @@ class SignInForm extends Component {
 
     handleSubmit(event) {
         event.preventDefault();
-        let { data } = axios.post(`${ROOT_AUTH_URL}/verifyOneTimePassword`, {
+        let response = axios.post(`${ROOT_AUTH_URL}/verifyOneTimePassword`, {
             phone: this.state.phone,
             code: this.state.code
         });
-        firebase.auth().signInWithCustomToken(data.token);
+        console.log(response.data);
+        // console.log(response.data);
+        // firebase.auth().signInWithCustomToken(response.data.token);
     }
 
     render() {
