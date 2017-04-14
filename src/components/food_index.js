@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchFood } from '../actions/index';
-import { Link } from 'react-router';
+// import { Link } from 'react-router';
+import Product from './Product';
+import Header from './Header';
 
 class FoodIndex extends Component {
   componentWillMount() {
@@ -14,12 +16,10 @@ class FoodIndex extends Component {
       const drink_cat_replace = drink_cat.replace(drink_cat, 'drykkir');
 
       return (
-        <li className="list-group-item" key={post.id}>
-          <Link to={"matur/" + post.id}>
-            <span className="pull-xs-right">{post.slug}</span>
-            <strong>{post.slug}</strong>
-          </Link>
-        </li>
+        <Product
+          post={post}
+          key={post.id}
+        />
       );
     });
   }
@@ -27,10 +27,10 @@ class FoodIndex extends Component {
   render() {
     return (
       <div>
-        <h3>Posts</h3>
-        <ul className="list-group">
+        <Header headerText="Matur" />
+        <div className="container product_container">
           {this.renderFood()}
-        </ul>
+        </div>
       </div>
     );
   }

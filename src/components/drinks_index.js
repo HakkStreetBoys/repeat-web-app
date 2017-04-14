@@ -16,8 +16,7 @@ class DrinksIndex extends Component {
       return (
         <li className="list-group-item" key={post.id}>
           <Link to={"drykkir/" + post.id}>
-            <span className="pull-xs-right">{post.slug}</span>
-            <strong>{post.slug}</strong>
+            {post.slug}
           </Link>
         </li>
       );
